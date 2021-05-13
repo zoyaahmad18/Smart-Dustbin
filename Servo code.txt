@@ -1,0 +1,26 @@
+#include <Servo.h>
+Servo servo;               
+int pir = 6;                
+int pirStat = 0;                  
+
+void setup() 
+{     
+ pinMode(pir, INPUT);
+ servo.attach(7);  
+ Serial.begin(9600);
+}
+void loop()
+{
+pirStat = digitalRead(pir); 
+if (pirStat == HIGH) 
+{            
+servo.write(0);
+delay(4500);
+} 
+else 
+{
+servo.write(140);
+
+ }
+
+}
