@@ -14,12 +14,12 @@ void loop()
 pirStat = digitalRead(pir); 
 if (pirStat == HIGH) 
 {            
-servo.write(0);
+servo.write(140);
 delay(4500);
 } 
 else 
 {
-servo.write(140);
+servo.write(0);
 
  }
 
